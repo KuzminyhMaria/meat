@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'PTSans-Bold';
+  src: url("../fonts/PTSans-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: #1f1d1d;
+  background: #3c4454;
+}
+
+::-webkit-selection {background: #ccc; color:#fff;}
+::-moz-selection {background: #ccc; color:#fff;}
+::-o-selection {background: #ccc; color:#fff;}
+::selection {background: #ccc; color:#fff;}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.container {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header__logo {
+  height: 150px;
+}
+
+.header__menu {
+  list-style-type: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.header__menu-item {
+  position: relative;
+  font-family: 'PTSans-Bold';
+  font-size: 20px;
+  color: #ffa26a;
+  text-transform: uppercase;
+  padding: 50px 10px 0;
+  transition: .5s;
+}
+
+.header__menu-item:hover,
+.header__menu-item.active {
+  color: #3c4454;
+  background: #ffa26a;
+}
+
+.map {
+  width: 100%;/*  width: 948px; */
+  border-radius: 50px;
+  border: 1px solid red;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 20px 0;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.footer__logo {
+  height: 150px;
+}
+
+.footer__menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 110px;
+  margin-left: auto;
+}
+
+.footer__menu-item {
+  position: relative;
+  font-family: 'PTSans-Bold';
+  font-size: 20px;
+  color: #ffa26a;
+  text-transform: uppercase;
+  transition: .5s;
+  padding: 0 20px;
+}
+
+.footer__menu-item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.footer__social-network {
+  margin-left: auto;
+}
+
+.footer__social-network_logo {
+  height: 30px;
+  margin: 0 20px;
+}
