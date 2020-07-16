@@ -30,6 +30,8 @@ window.addEventListener('click', function(e) {
     if (element.contains(e.target)) {
       changeVisibility(windowCheckin, 'hidden');
       changeVisibility(windowPasswordRecovery, 'hidden');
+      changeVisibility(menu, 'hidden');
+      callButtonMenu.classList.remove("active");
       changeVisibility(windowLogin, 'visible')
       break;
     }
@@ -129,13 +131,3 @@ buttonPasswordRecovery.addEventListener("click", function() {
     isValid = false;
   } else PasswordRecoveryWindowEmail.classList.remove("not-valid");
 });
-
-function changeVisibility(item, visibility) {
-  visibility === 'visible' && item.classList.add("visible");
-  visibility === 'hidden' && item.classList.remove("visible");
-}
-
-function validationCheck(value, reg) {
-  if (!reg.test(value) || !(value === value.match(reg)[0])) return false;
-  return true;
-}
