@@ -1,0 +1,138 @@
+.pop-up-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px #ffa26a;
+  flex-direction: column;
+}
+
+.password-recovery {
+  display: flex;
+}
+
+.pop-up-window.visible {
+  display: flex;
+}
+
+.pop-up-window__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop-up-window__name {
+  color: #ffa26a;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.pop-up-window__hr {
+  height: 2px;
+  width: 100%;
+  background: #ffa26a;
+  margin-bottom: 30px;
+}
+
+.login-window,
+.checkin-window,
+.password-recovery-window {
+  background: #3c4454;
+  padding: 40px;
+  width: 400px;
+}
+
+.pop-up-window__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-up-window__form-item {
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0 30px;
+  font-size: 16px;
+  color: #989797;
+  margin-bottom: 35px;
+}
+
+.checkin-window__form-item_select-container {
+  position: relative;
+  display: inline-block;
+}
+
+.checkin-window__form-item_select-container:after {
+  content: "▼";
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  pointer-events: none;
+  box-sizing: border-box;
+  color: #989797;
+}
+
+.checkin-window__form-item_select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.checkin-window__form-item_second-name,
+.checkin-window__form-item_first-name,
+.checkin-window__form-item_inn {
+  display: none;
+}
+
+.checkin-window__form-item_second-name.visible,
+.checkin-window__form-item_first-name.visible,
+.checkin-window__form-item_inn.visible {
+  display: block;
+}
+
+.login-window__no-login-box,
+.password-recovery-window__no-password-recovery-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.login-window__no-login,
+.checkin-window__no-checkin,
+.password-recovery-window__no-password-recovery {
+  color: #ffa26a;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.checkin-window__no-checkin {
+  align-self: flex-end;
+}
+
+.pop-up-window__form-button {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 30px;
+  font-size: 16px;
+  color: #1f1d1d;
+  font-weight: 500;
+  text-transform: uppercase;
+  align-self: center;
+  margin-bottom: 19px;
+}
+
+.not-valid {
+  border: 2px solid #ffa26a;
+  transform: scale(1.1);
+}

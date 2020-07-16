@@ -1,6 +1,13 @@
+@import "./pop-up-windows/pop-up-windows.css";
+
 @font-face {
   font-family: 'PTSans-Bold';
   src: url("../fonts/PTSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("../fonts/PTSans.ttf");
 }
 
 * {
@@ -13,6 +20,7 @@
 
 body {
   font-size: 14px;
+  font-family: 'PTSans';
   color: #1f1d1d;
   background: #3c4454;
 }
@@ -40,6 +48,39 @@ img {
   user-drag: none;
 }
 
+.button {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.close-button {
+  align-self: center;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+}
+
+.close-button__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  border-radius: 3px;
+  background: #ffa26a;
+  backface-visibility: hidden;
+}
+
+.close-button__line:first-of-type {
+  transform: translate(-50%, -50%) translateZ(0) rotate(45deg);
+}
+
+.close-button__line:last-of-type {
+  transform: translate(-50%, -50%) translateZ(0) rotate(-45deg);
+}
+
 .container {
   max-width: 1500px;
   min-height: 100vh;
@@ -53,6 +94,7 @@ img {
   display: flex;
   align-items: center;
   padding: 20px 0;
+  border-bottom: 1px solid #ffa26a;
 }
 
 .header__logo {
@@ -75,16 +117,22 @@ img {
   transition: .5s;
 }
 
+.header__menu-item_login {
+  cursor: pointer;
+}
+
 .header__menu-item:hover,
 .header__menu-item.active {
   color: #3c4454;
   background: #ffa26a;
 }
 
+main {
+  padding: 30px 0;
+}
+
 .map {
   width: 100%;/*  width: 948px; */
-  border-radius: 50px;
-  border: 1px solid red;
 }
 
 .footer {
@@ -93,6 +141,7 @@ img {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
+  border-top: 1px solid #ffa26a;
 }
 
 .footer__logo {
