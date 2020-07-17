@@ -41,8 +41,8 @@
 .checkin-window,
 .password-recovery-window {
   background: #3c4454;
-  padding: 40px;
-  width: 400px;
+  padding: 25px 30px;
+  width: 100vw;
 }
 
 .pop-up-window__form {
@@ -52,14 +52,14 @@
 }
 
 .pop-up-window__form-item {
-  height: 50px;
+  height: 35px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 5px;
   padding: 0 30px;
   font-size: 16px;
   color: #989797;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .checkin-window__form-item_select-container {
@@ -72,7 +72,7 @@
   font-size: 16px;
   position: absolute;
   right: 20px;
-  top: 15px;
+  top: 8px;
   pointer-events: none;
   box-sizing: border-box;
   color: #989797;
@@ -105,12 +105,16 @@
   padding: 20px 0;
 }
 
+.login-window__no-login-box {
+  flex-direction: column;
+}
+
 .login-window__no-login,
 .checkin-window__no-checkin,
 .password-recovery-window__no-password-recovery {
   color: #ffa26a;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -123,8 +127,8 @@
   height: 40px;
   width: 100%;
   border-radius: 5px;
-  padding: 0 30px;
-  font-size: 16px;
+  padding: 0 10px;
+  font-size: 14px;
   color: #1f1d1d;
   font-weight: 500;
   text-transform: uppercase;
@@ -135,4 +139,59 @@
 .not-valid {
   border: 2px solid #ffa26a;
   transform: scale(1.1);
+}
+
+@media (min-width: 335px) {
+  .pop-up-window__form-button {
+    font-size: 16px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 340px) {
+  .login-window__no-login-box {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 400px) {
+  .login-window__no-login,
+  .checkin-window__no-checkin,
+  .password-recovery-window__no-password-recovery {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 500px) {
+  .login-window,
+  .checkin-window,
+  .password-recovery-window {
+    width: 400px;
+  }
+}
+
+@media (min-height: 600px) {
+  .login-window,
+  .checkin-window,
+  .password-recovery-window {
+    padding: 40px;
+  }
+}
+
+@media (min-height: 770px) {
+  .login-window,
+  .checkin-window,
+  .password-recovery-window {
+    padding: 40px;
+  }
+
+  .pop-up-window__form-item {
+    height: 50px;
+    margin-bottom: 35px;
+  }
+
+  .checkin-window__form-item_select-container:after {
+    top: 15px;
+  }
 }
